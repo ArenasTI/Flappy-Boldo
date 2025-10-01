@@ -1,41 +1,39 @@
 # Flappy Boldo
 
-## Integrantes
-- Flavio Gonzalez
-- Lucas Rolandi
-- Tiago Arenas
+A [libGDX](https://libgdx.com/) project generated with [gdx-liftoff](https://github.com/libgdx/gdx-liftoff).
 
-## Descripción
-Flappy Boldo es un minijuego inspirado en la mecánica clasica de juegos movil "Flappy Bird". El jugador controla a un personaje que debe esquivar tubos dando saltos cortos. La idea es alcanzar la mayor puntuación posible sin chocar.  
-Actualmente cuenta con sistemas como movimiento, los obstáculos y un contador de puntos y monedas.
+This project was generated with a template including simple application launchers and an `ApplicationAdapter` extension that draws libGDX logo.
 
-## Tecnologías utilizadas
-- Java
-- Swing (interfaz gráfica)
-- Librerías estándar de Java
+## Platforms
 
-## Cómo compilar y ejecutar
-1. Clonar el repositorio:
-   git clone https://github.com/ArenasTI/Flappy-Boldo
- 
-2.Abrir el proyecto en un IDE (Eclipse, IntelliJ o NetBeans).
+- `core`: Main module with the application logic shared by all platforms.
+- `lwjgl3`: Primary desktop platform using LWJGL3; was called 'desktop' in older docs.
+- `html`: Web platform using GWT and WebGL. Supports only Java projects.
+- `lwjgl2`: Legacy desktop platform using LWJGL2.
 
-3. Compilar el proyecto desde el IDE o ejecutar:
+## Gradle
 
-javac *.java
-java Ejecucion
+This project uses [Gradle](https://gradle.org/) to manage dependencies.
+The Gradle wrapper was included, so you can run Gradle tasks using `gradlew.bat` or `./gradlew` commands.
+Useful Gradle tasks and flags:
 
-## Estado actual del proyecto:
+- `--continue`: when using this flag, errors will not stop the tasks from running.
+- `--daemon`: thanks to this flag, Gradle daemon will be used to run chosen tasks.
+- `--offline`: when using this flag, cached dependency archives will be used.
+- `--refresh-dependencies`: this flag forces validation of all dependencies. Useful for snapshot versions.
+- `build`: builds sources and archives of every project.
+- `cleanEclipse`: removes Eclipse project data.
+- `cleanIdea`: removes IntelliJ project data.
+- `clean`: removes `build` folders, which store compiled classes and built archives.
+- `eclipse`: generates Eclipse project data.
+- `html:dist`: compiles GWT sources. The compiled application can be found at `html/build/dist`: you can use any HTTP server to deploy it.
+- `html:superDev`: compiles GWT sources and runs the application in SuperDev mode. It will be available at [localhost:8080/html](http://localhost:8080/html). Use only during development.
+- `idea`: generates IntelliJ project data.
+- `lwjgl2:jar`: builds application's runnable jar, which can be found at `lwjgl2/build/libs`.
+- `lwjgl2:run`: starts the application.
+- `lwjgl3:jar`: builds application's runnable jar, which can be found at `lwjgl3/build/libs`.
+- `lwjgl3:run`: starts the application.
+- `test`: runs unit tests (if any).
 
-Proyecto configurado y subido a GitHub.
-
-Movimiento del personaje implementado.
-
-Obstáculos con generación y colisión.
-
-Sistema de puntuación funcionando.
-
-Monedas como mecánica adicional.
-
-## Enlace a la Wiki
-https://github.com/ArenasTI/Flappy-Boldo/wiki
+Note that most tasks that are not specific to a single project can be run with `name:` prefix, where the `name` should be replaced with the ID of a specific project.
+For example, `core:clean` removes `build` folder only from the `core` project.
